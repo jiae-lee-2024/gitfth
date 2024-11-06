@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>셀프체크</title>
+</head>
+<body>
+
+<h1>hello,<span id="target">World</span>!</h1>
+<input type="text" id="text-input">
+<button id="send-btn">전송</button>
+<script>
+
+    const inputElement = document.querySelector("#text-input");
+    const buttonElement = document.querySelector("#send-btn");
+
+    buttonElement.addEventListener("click", function() {
+
+    const str = inputElement.value;
+    inputElement.value = "";
+    target.innerText = str;
+
+    });
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
