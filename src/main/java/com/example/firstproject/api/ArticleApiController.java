@@ -16,6 +16,9 @@ import java.util.List;
 @RestController
 public class ArticleApiController {
 
+    // commit test
+
+
     // 객체 주입된 리파지터리를 서비스로 변환
     @Autowired
     private ArticleService articleService; // 서비스 객체 주입
@@ -70,7 +73,7 @@ public class ArticleApiController {
     @PostMapping("api/transaction-test") // 여러 게시글 생성 요청 접수
     public ResponseEntity<List<Article>> transactionTest // 메서드 정의
             (@RequestBody List<ArticleForm> dtos) {
-        List<Article> createdList = articleService.createArticles(dtos); // 서비스 호출
+        List<Article> createdList = articleService.createArticles(dtos);
         return (createdList != null) ? // 생성 결과에 따른 응답 처리
                 ResponseEntity.status(HttpStatus.OK).body(createdList) :
                 ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
